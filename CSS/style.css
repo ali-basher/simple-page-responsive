@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Inter:wght@100..900&display=swap');
+
+body {
+    /* background-color: #282A36; */
+    font-family: 'Inter', 'sans-serif';
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+header h2 {
+    font-family: "Honk", system-ui;
+    font-size: 2rem;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+header div.icon-container {
+    display: none;
+}
+
+main {
+    display: flex;
+    gap: 1vw;
+    height: 80vh;
+}
+
+main div.left {
+    flex: 1;
+    background-color: royalblue;
+    order: 0;
+}
+
+main div.right {
+    flex: 1;
+    background: url('https://cdn.wallpapersafari.com/2/94/nreGO9.png');
+    background-position: center;
+    background-size: cover;
+    order: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    header nav ul {
+        display: none;
+    }
+
+    header div.icon-container {
+        display: block;
+    }
+
+    main {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    main div.right {
+        order: -1;
+    }
+
+}
